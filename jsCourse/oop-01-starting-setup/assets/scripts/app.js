@@ -134,13 +134,15 @@ class ProductItem extends Component {
 }
 
 class ProductList extends Component {
+  #products = [];
   constructor(renderHookId) {
-    super(renderHookId);
+    super(renderHookId, false);
+    this.render();
     this.fetchProducts();
   }
 
   fetchProducts() {
-    this.products = [
+    this.#products = [
       new Product(
         "a pillow",
         "data:image/jpeg;base64,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",
@@ -160,7 +162,7 @@ class ProductList extends Component {
   }
 
   renderProducts() {
-    for (const prod of this.products) {
+    for (const prod of this.#products) {
       new ProductItem(prod, "prod-list");
     }
   }
@@ -169,7 +171,7 @@ class ProductList extends Component {
     const prodList = this.createRootElement("ul", "product-list", [
       new ElementAttribute("id", "prod-list"),
     ]);
-    if (this.products && this.products.length > 0) {
+    if (this.#products && this.#products.length > 0) {
       this.renderProducts();
     }
   }
