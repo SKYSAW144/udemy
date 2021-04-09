@@ -10,17 +10,26 @@ body {
   margin: 0;
 }
 
-header {
+nav {
   position: fixed;
   top: 0;
   left: 0;
   height: 4rem;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #540075;
+  background: hsl(118, 94%, 34%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+}
+
+.nav-links,
+.nav-link {
+  margin: 1em;
 }
 
 button a {
