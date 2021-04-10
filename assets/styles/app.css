@@ -10,21 +10,42 @@ body {
   margin: 0;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4rem;
+.main-header {
+  /* we want the header to take the full page width */
   width: 100%;
-  display: flex;
-  align-items: center;
-  background: hsl(118, 94%, 34%);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  /* it should not move */
+  position: fixed;
+  /* x-coordinate */
+  left: 0;
+  /* y-coordinate */
+  top: 0;
+  /* background */
+  background: #2ddf5c;
+  /* padding: 8px vertically, 16px horizontally */
+  padding: 8px 16px;
 }
 
-ul {
-  text-align: left;
+/* any divs directly descendent from a main-header */
+.main-header > div {
   display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  /* color of the text */
+  color: #0e4f1f;
+  /* remove the stupid underline */
+  text-decoration: none;
+  /* make it bolder */
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 74px);
+  vertical-align: middle;
 }
 
 .nav-links,
