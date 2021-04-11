@@ -1,4 +1,32 @@
 #product-overview {
+  /* default gradients from top to bottom */
+  /* background-image: linear-gradient(to bottom, red, blue); */
+  /* background-image: linear-gradient(180deg, red, blue, green, yellow); */
+
+  /* you can define percentages for each color, after which the transition to 
+  the next color begins */
+  /* background-image: linear-gradient(180deg, red 70%, blue, rgba(0, 0, 0, 0.6)); */
+
+  /* positioned in middle by default, and is an ellipse */
+  /* background-image: radial-gradient(red, blue, green); */
+
+  /* background-image: radial-gradient(circle 20px at center, red, blue, green); */
+
+  /* style the width and height of ellipse 
+  farthest-side: outermost of blue will touch farthest side*/
+  /* background-image: radial-gradient(
+    ellipse farthest-side at left,
+    red,
+    blue,
+    green
+  ); */
+
+  background-image: radial-gradient(
+    ellipse farthest-corner at 20% 50%,
+    red,
+    blue,
+    green
+  );
   /* this shorthand combines:
 	  background: url('freedom.jpg');
 		background-position: left 10% bottom 20%;
@@ -7,8 +35,8 @@
   	background-clip: border-box;
   	background-attachment: fixed;
 	*/
-  background: url('freedom.jpg') left 10% bottom 20% / cover no-repeat
-    border-box fixed;
+  /* background: url('freedom.jpg') left 10% bottom 20% / cover no-repeat
+    border-box fixed; */
   /* shorthand: could also use background-image */
   /* background: url('freedom.jpg'); */
 
