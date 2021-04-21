@@ -1,6 +1,6 @@
 .testimonial {
-  font-size: 20px;
-  margin: 48px 0;
+  font-size: 1.2rem;
+  margin: 3rem 0;
 }
 
 .testimonial__list {
@@ -10,11 +10,15 @@
 
 /* pseudo selector to style first element of type .testimonial */
 .testimonial:first-of-type {
-  margin-top: 96px;
+  margin-top: 6rem;
 }
 
 .testimonial__image-container {
   width: 65%;
+
+  /* constrain image */
+  max-width: 580px;
+  /* min-width: 350px; */
   /* need this to make children respect size of parent */
   display: inline-block;
   /* align the info with the middle of block element */
@@ -32,7 +36,7 @@
 
 .testimonial__info {
   text-align: right;
-  padding: 14px;
+  padding: 0.9rem;
   display: inline-block;
   vertical-align: middle;
   width: 30%;
@@ -49,11 +53,15 @@
 .testimonial__name {
   margin: 3px;
   color: #ff5454;
+  font-size: 2rem;
 }
 
 .testimonial__subtitle {
   margin: 0;
-  font-size: 18px;
+  /* 'r' in rem = 'root'; more predictable than em
+  which determines the sizing relative to any parent */
+  font-size: 1.1rem;
+  /* font-size: 1.1em; */
   color: #ccc;
 }
 
@@ -68,5 +76,5 @@
 }
 
 .testimonial__text {
-  margin: 3px;
+  margin: 0.2rem;
 }
