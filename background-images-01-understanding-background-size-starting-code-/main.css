@@ -36,7 +36,7 @@
   	background-attachment: fixed;
 	*/
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url('images/freedom.jpg') left 10% bottom 20% / cover no-repeat border-box,
+    url('images/freedom.jpg') left 10% bottom 70% / cover no-repeat border-box,
     red;
   /* shorthand: could also use background-image */
   /* background: url('freedom.jpg'); */
@@ -66,10 +66,10 @@
   /* background-repeat: repeat-x; */
   /* turn on repeating: y-axis */
   /* background-repeat: repeat-y; */
-  width: 100%;
-  height: 528px;
+  width: 100vw;
+  height: 33vh;
   padding: 10px;
-  margin-top: 43px;
+  margin-top: 2.75rem;
 
   /* border: 5px dashed red; */
   /* defines container for the background */
